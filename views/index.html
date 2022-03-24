@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/style.css">
+    <title>Dashboard | Sven</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Sven<strong>Tv</strong> </h1>
+        </div>
+        <div class="user">
+            <img src="../public/img/user.jpg" alt="">
+            <h1><%= name %> </h1>
+          <form action="/logout?_method=DELETE" method="POST">
+            <button type="submit">Sair</button>
+          </form>
+        </div>
+    </header>
+
+    <section class="main">
+        <div class="banner" id="banner"><div class="gradient"><img src="../public/img/banner.jpg" alt=""></div></div>
+
+        <div class="container-card">
+
+        </div>
+
+        
+
+    </section>
+
+    <script>
+      const card = document.querySelector('.container-card');
+      const containerFrame = document.querySelector('.container-frame');
+
+      fetch('https://apitvonline.herokuapp.com/clients').then(response=> response.json()).then(data=>{
+          data.forEach(element => {
+              card.innerHTML += `
+                  <div class="card">
+                    <img src="${element.image}" alt="">
+                    <div class="titles-card">
+                        <a href="${element.link}">Assistir</a>
+                        <h1>${element.title}</h1>
+                    </div>
+                  </div>
+              `;
+          })
+        })
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/login.css">
+    <title>Cadastro | Sven</title>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h1>Sven<strong>Tv</strong> </h1>
+        </div>
+    </header>
+
+    <section class="main">
+        <h1>Crie sua conta</h1>
+        <form action="/register" method="POST">
+            <span class="input"><img src="../public/img/user.svg" alt=""><input  type="text" id="name" name="name" required placeholder="Nome de usuario"></span>
+            <span class="input"><img src="../public/img/email.svg" alt=""><input type="email" id="email" name="email" required placeholder="Email"></span>
+            <span class="input"><img src="../public/img/key.svg" alt=""><input type="password" id="password" name="password" required placeholder="Senha"></span>
+            <span class="password"><input type="submit" value="Criar minha conta"></span>
+            <p>Já tem uma conta  <a href="/login">Entrar</a></p>
+        </form>
+    </section>
+</body>
+</html>

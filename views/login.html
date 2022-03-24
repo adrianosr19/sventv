@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/login.css">
+    <title>Entrar | Sven</title>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h1>Sven<strong>Tv</strong> </h1>
+        </div>
+    </header>
+
+    <% if (messages.error) { %>
+      <%= messages.error %>
+    <% } %>
+
+    <section class="main">
+        <h1>Entrar</h1>
+        <form action="/login" method="POST">
+            <span class="input"><img src="../public/img/user.svg" alt=""><input type="email" id="email" name="email" required placeholder="Nome de usuario"></span>
+            <span class="input"><img src="../public/img/key.svg" alt=""><input type="password" id="password" name="password" required placeholder="Senha"></span>
+            <span class="password"><input type="submit" value="Entrar"></span>
+            <p>Não tem uma conta  <a href="/register">Cadastrar</a></p>
+        </form>
+    </section>
+</body>
+</html>

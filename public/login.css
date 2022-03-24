@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+header .logo h1{
+    font-size: 2em;
+    font-weight: 300;
+    color: #ffffff;
+}
+header .logo h1 strong{
+    font-weight: 800;
+    background: -webkit-linear-gradient(#2D2776 10% ,#0078F9 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(50deg, #0f8dd6 -30%, #030708 50%, #0f8dd6 150%);
+}
+.main h1{
+    font-size: 2.6em;
+    font-weight: 600;
+    color: #ffffff;
+}
+.main form{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    /* background-color: #051826; */
+}
+.main form span{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px 0;
+    border: 1px solid #3C3D3D;
+    border-radius: 5px;
+    padding-left: 10px;
+}
+.main form span img{
+    width: 20px;
+    height: 20px;
+}
+.main form .input input{
+    width: 90%;
+    height: 40px;
+    background-color: transparent;
+    color: #ffffff;
+    border: none;
+    padding-left: 20px;
+    outline: none;
+    font-size: 14px;
+    font-weight: 500;
+    font-style: normal;
+    
+}
+.main form .password{
+    margin-top: 10px;
+    width: 100%;
+    border: none;
+    background-color: #005EF2;
+}
+.main form .password input[type=submit]{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    color: #ffffff;
+    background-color: transparent;
+    font-size: 12px;
+    font-weight: 500;
+    border: none;
+}
+.main form p{
+    margin-top: 20px;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main form p a{
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 500;
+}
+::-webkit-input-placeholder{
+    font-weight: 500;
+    font-size: 12px;
+    color: #ffffff;
+}
