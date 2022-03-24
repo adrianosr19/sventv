@@ -93,57 +93,30 @@ header .user form button{
 .main .container-card{
     width: 100%;
     height: 100%;
-    display: flex;
-    flex-direction:row;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 20px 2em;
-}
-.main .container-card .card{
-    position: relative;
-    width: 300px;
-    height: 200px;
-    background-color: #000000;
-    border-radius: 10px;
-    margin: 20px 10px;
-    padding: 20px;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.main .container-card .card img{
-    width: 90%;
-    height: 90%;
-    object-fit: cover;
-    z-index: 1;
-}
-.main .container-card .card .titles-card{
-    position: absolute;
-    z-index: 3;
-    width: 200px;
-    height: 100%;
+    padding: 20px 2em;;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
-    padding: 10px 0;
+    justify-content: center;
 }
-.main .container-card .card .titles-card h1{
-    font-size: 16px;
-    color: #ffffff;
-}
-.main .container-card .card .titles-card a{
-    text-decoration: none;
-    border: none;
-    cursor: pointer;
-    font-size: 14px;
-    color: #ffffff;
+.main .container-card .filmes-series, .desenhos-animados, .variedades{
     width: 100%;
-    height: 30px;
-    border-radius: 20px;
-    background-color: #2D2776;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.main .container-card .block-title{
+    width: 95%;
+    height: 100px;
+    background-color: #291196;
+    border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.main .container-card .block-title h1{
+    font-size: 16px;
+    color: #ffffff;
 }
