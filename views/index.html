@@ -12,9 +12,11 @@
         <div class="logo">
             <h1>Sven<strong>Tv</strong> </h1>
         </div>
+
         <div class="user">
             <img src="../public/img/user.jpg" alt="">
             <h1><%= name %> </h1>
+
           <form action="/logout?_method=DELETE" method="POST">
             <button type="submit">Sair</button>
           </form>
@@ -50,48 +52,8 @@
 
             </div>
         </div>
-
-        
-
     </section>
 
-    <script>
-      const filmesseries = document.querySelector('.filmes-series');
-      const desenhosanimados = document.querySelector('.desenhos-animados');
-      const variedades = document.querySelector('.variedades');
-
-      fetch('https://apitvonline.herokuapp.com/clients').then(response=> response.json()).then(data=>{
-        data.forEach(element => {
-              filmesseries.innerHTML += `
-                  <div class="card">
-                    <img src="${element.image}" alt="">
-                    <div class="titles-card">
-                        <a href="${element.link}">Assistir</a>
-                        <h1>${element.title}</h1>
-                    </div>
-                  </div>
-              `;
-              desenhosanimados.innerHTML += `
-                  <div class="card">
-                    <img src="${element.image}" alt="">
-                    <div class="titles-card">
-                        <a href="${element.link}">Assistir</a>
-                        <h1>${element.title}</h1>
-                    </div>
-                  </div>
-              `;
-              variedades.innerHTML += `
-                  <div class="card">
-                    <img src="${element.image}" alt="">
-                    <div class="titles-card">
-                        <a href="${element.link}">Assistir</a>
-                        <h1>${element.title}</h1>
-                    </div>
-                  </div>
-              `;
-          })
-        })
-
-    </script>
+    <script src="../public/scripts/script.js"></script>
 </body>
 </html>

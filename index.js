@@ -10,7 +10,6 @@ const flash = require('express-flash')
 const session = require('express-session')
 const methodOverride = require('method-override')
 const path = require('path');
-
 const initializePassport = require('./passport-config')
 initializePassport(
   passport,
@@ -44,9 +43,6 @@ app.get('/login', checkNotAuthenticated, (req, res) => {
 })
 app.get('/register', checkNotAuthenticated, (req, res) => {
   res.render('register.html')
-})
-app.get('/assistir', checkAuthenticated, (req, res) => {
-  res.render('ver', { name: req.user.name })
 })
 
 app.post('/login', checkNotAuthenticated, passport.authenticate('local', {
